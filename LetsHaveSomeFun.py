@@ -1,20 +1,18 @@
-import time  # Imports a module to add a pause
 
-# Figuring out how users might respond
 answer_A = ["A", "a"]
 answer_B = ["B", "b"]
 answer_C = ["C", "c"]
 yes = ["Y", "y", "yes"]
 no = ["N", "n", "no"]
 
-# Grabbing objects
+
 sword = 0
 flower = 0
 
-required = ("\nUse only A, B, or C\n")  # Cutting down on duplication
+required = ("\nUse only A, B, or C\n")
 
 
-# The story is broken into sections, starting with "intro"
+
 def intro():
     print("After a drunken night out with friends, you awaken the "
           "next morning in a thick, dank forest. Head spinning and "
@@ -26,7 +24,7 @@ def intro():
     print("""  A. Grab a nearby rock and throw it at the orc
   B. Lie down and wait to be mauled
   C. Run""")
-    choice = input(">>> ")  # Here is your first choice.
+    choice = input(">>> ")
     if choice in answer_A:
         option_rock()
     elif choice in answer_B:
@@ -129,7 +127,7 @@ def option_town():
           "near your foot. Do you pick it up? Y/N")
     choice = input(">>> ")
     if choice in yes:
-        flower = 1  # adds a flower
+        flower = 1
     else:
         flower = 0
     print("You hear its heavy footsteps and ready yourself for "
